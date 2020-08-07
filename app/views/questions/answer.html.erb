@@ -1,0 +1,12 @@
+<h1>Answer page</h1>
+<%=@user_input%>
+<br>
+<% if @user_input.downcase == "i am going to work right now!" %>
+<%= "Great!" %>
+<% elsif @user_input.ends_with?("?")%>
+<%= "Silly question, get dressed and go to work!" %>
+<% else %>
+<%= "I don't care, get dressed and go to work!"%>
+<% end %>
+<br>
+<%= link_to "Ask", ask_path %>
